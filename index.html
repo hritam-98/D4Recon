@@ -82,18 +82,18 @@
       <div class="hero-body">
         <img class="round center-image" style="width:700px;" src="static/images/teaser.png" alt="D4Recon Teaser" />
         <h2 class="subtitle is-justified">
-          <b>Problem Overview:</b> High-fidelity 3D reconstruction of deformable tissue in endoscopic surgery is critical for intraoperative guidance, simulation, and robotic automation. Existing methods struggle with dynamic tissue deformation, occlusions, and depth inaccuracies. <b>D4Recon</b> introduces a dual-stage deformation model and dual-scale depth guidance within a dynamic 3D Gaussian Splatting framework, achieving real-time, photorealistic, and geometrically consistent reconstructions even under challenging surgical scenarios[1].
+          <b>Problem Overview:</b> High-fidelity 3D reconstruction of deformable tissue in endoscopic surgery is critical for intraoperative guidance, simulation, and robotic automation. Existing methods struggle with dynamic tissue deformation, occlusions, and depth inaccuracies. <b>D4Recon</b> introduces a dual-stage deformation model and dual-scale depth guidance within a dynamic 3D Gaussian Splatting framework, achieving real-time, photorealistic, and geometrically consistent reconstructions even under challenging surgical scenarios.
         </h2>
       </div>
     </div>
   </section> -->
   <section>
-      <h3>Video Demo</h3>
-      <!-- Option 1: Embed YouTube -->
-      <iframe width="560" height="315" src="static/SupplementaryFile-1587-compressed.mp4" frameborder="0" allowfullscreen></iframe>
-      <!-- Option 2: Local video -->
-      <!-- <video controls src="assets/video/demo.mp4" width="100%"></video> -->
-  </section>
+  <!-- <h3>Video Demo</h3> -->
+  <div style="display: flex; justify-content: center;">
+    <iframe width="80%" height="400" src="static/SupplementaryFile-1587-compressed.mp4" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
   <!-- Abstract -->
   <section class="section">
     <div class="container is-max-desktop">
@@ -127,7 +127,7 @@
         <div class="column is-four-fifths">
           <div class="content is-justified">
             <p>
-              <b>D4Recon workflow:</b> Gaussians are initialized from the input endoscopic video, followed by dual-stage deformation modeling: a spatial deformation model corrects multiview inconsistencies, while a temporal model captures dynamic tissue interactions. Dual-scale depth guidance is introduced, combining hard (global) and soft (local) constraints to refine depth and preserve fine-grained color accuracy. Optimization is performed using spatiotemporal Score Distillation Sampling (SDS) losses and dual-scale depth guidance loss, enabling stable, high-fidelity 3D reconstructions[1].
+              <b>D4Recon workflow:</b> Gaussians are initialized from the input endoscopic video, followed by dual-stage deformation modeling: a spatial deformation model corrects multiview inconsistencies, while a temporal model captures dynamic tissue interactions. Dual-scale depth guidance is introduced, combining hard (global) and soft (local) constraints to refine depth and preserve fine-grained color accuracy. Optimization is performed using spatiotemporal Score Distillation Sampling (SDS) losses and dual-scale depth guidance loss, enabling stable, high-fidelity 3D reconstructions.
             </p>
           </div>
         </div>
@@ -147,13 +147,16 @@
                 <img src="static/images/results.png" alt="Results" class="round" style="width:70%;" />
               </center>
               <p>
-                <b>Quantitative Results:</b> D4Recon achieves state-of-the-art performance on both dynamic and static endoscopic datasets. On the EndoNeRF and StereoMIS datasets, D4Recon outperforms prior methods in PSNR, SSIM, and LPIPS, while maintaining real-time rendering speeds. On static datasets, it demonstrates a significant improvement margin over NeRF, SLAM, and previous 3DGS-based methods. The results highlight D4Recon's ability to deliver sharper tissue boundaries, stable geometry, and robust depth estimation under occlusion and deformation[1].
+                <b>Quantitative Results:</b> D4Recon achieves state-of-the-art performance on both dynamic and static endoscopic datasets. On the EndoNeRF and StereoMIS datasets, D4Recon outperforms prior methods in PSNR, SSIM, and LPIPS, while maintaining real-time rendering speeds. On static datasets, it demonstrates a significant improvement margin over NeRF, SLAM, and previous 3DGS-based methods. The results highlight D4Recon's ability to deliver sharper tissue boundaries, stable geometry, and robust depth estimation under occlusion and deformation.
               </p>
               <center>
-                <img src="static/images/sota_comparison.png" alt="SOTA Comparison" class="round" style="width:90%;" />
+                <img src="static/images/dynamic.png" alt="SOTA Comparison on Surgical Datasets" class="round" style="width:90%;" />
+              </center>
+              <center>
+                <img src="static/images/static.png" alt="SOTA Comparison on Static Datasets" class="round" style="width:90%;" />
               </center>
               <p>
-                <b>Qualitative Results:</b> Visual comparisons show that D4Recon produces high-fidelity reconstructions with superior structural coherence and photorealism, mitigating artifacts and flickering common in previous approaches[1].
+                <b>Qualitative Results:</b> Visual comparisons show that D4Recon produces high-fidelity reconstructions with superior structural coherence and photorealism, mitigating artifacts and flickering common in previous approaches.
               </p>
             </div>
           </div>
@@ -174,7 +177,7 @@
                 <img src="static/images/ablation.png" alt="Ablation Study" class="round" style="width:80%;" />
               </center>
               <p>
-                <b>Ablation of Key Components:</b> Removing dual-stage deformation or dual-scale depth guidance leads to notable drops in reconstruction quality. The combination of spatial and temporal SDS losses, along with both hard and soft depth guidance, yields the best performance, demonstrating the importance of each component for robust reconstruction in dynamic surgical environments[1].
+                <b>Ablation of Key Components:</b> Removing dual-stage deformation or dual-scale depth guidance leads to notable drops in reconstruction quality. The combination of spatial and temporal SDS losses, along with both hard and soft depth guidance, yields the best performance, demonstrating the importance of each component for robust reconstruction in dynamic surgical environments.
               </p>
             </div>
           </div>
