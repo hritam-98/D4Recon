@@ -3,13 +3,13 @@ Code will be updated soon.
 Please contact hbasak@cs.stonybrook.edu for questions
 
 
-D'Recon: Dual-stage Deformation and Dual-scale Depth Guidance for Endoscopic Reconstruction
+D4Recon: Dual-stage Deformation and Dual-scale Depth Guidance for Endoscopic Reconstruction
 
-Implementation of D'Recon, a dynamic 3D Gaussian Splatting framework designed for high-fidelity endoscopic reconstruction. This method addresses the challenges of irreversible tissue deformations and sparse viewpoints in surgical scenes by introducing Dual-stage Spatiotemporal Deformation modeling and Dual-scale Depth Guidance.
+Implementation of D4Recon, a dynamic 3D Gaussian Splatting framework designed for high-fidelity endoscopic reconstruction. This method addresses the challenges of irreversible tissue deformations and sparse viewpoints in surgical scenes by introducing Dual-stage Spatiotemporal Deformation modeling and Dual-scale Depth Guidance.
 
 📄 Abstract
 
-Deformable tissue reconstruction in endoscopy is vital for surgery, yet current methods struggle with high-fidelity reconstruction of irreversible tissue deformations. D'Recon proposes a dynamic 3D Gaussian Splatting paradigm with two core innovations:
+Deformable tissue reconstruction in endoscopy is vital for surgery, yet current methods struggle with high-fidelity reconstruction of irreversible tissue deformations. D4Recon proposes a dynamic 3D Gaussian Splatting paradigm with two core innovations:
 
 Dual-stage Deformation Modeling: Separates spatial deformations (to correct static multiview inconsistencies) from temporal deformations (to model dynamic tissue interactions).
 
@@ -117,7 +117,7 @@ Loss: $\mathcal{L}_{DDG} = ||D_{HDG} - D_{GT}||_2 + ||D_{SDG} - D_{GT}||_2$
 If you use this code, please cite the original MICCAI paper:
 
 @inproceedings{basak2024drecon,
-  title={D'Recon: Dual-stage Deformation and Dual-scale Depth Guidance for Endoscopic Reconstruction},
+  title={D4Recon: Dual-stage Deformation and Dual-scale Depth Guidance for Endoscopic Reconstruction},
   author={Basak, Hritam and Yin, Zhaozheng},
   booktitle={MICCAI},
   year={2024}
